@@ -1,62 +1,63 @@
 <!DOCTYPE html>
-<style media="screen">
-
-
-</style>
-
-
 <html>
 <head>
     <title>My Bio</title>
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+    
 </head>
 <body>
-    <div class="wrapper ">
+    <div class="wrapper login-page">
         <header class="main-header box-shadow">
-            <h1>Scott Vang</h1>
+            <h1>Lucas Phan</h1>
         </header>
-            </article>
-        </section>
-        <section class="content-bottom">
+        <section class="content-bottom one-column">
             <article class="main-content one-column">
                 <div class="login-form">
-                    <h1>Login</h1>
+                    <h1 class="login-h1">Login</h1>
                     <label for="username">Username</label>
-                    <input type="text" placeholder="Username" id="username" required>
+                    <input class="login-input" type="text" id="username">
                     <label for="password">Password</label>
-                    <input type="password" placeholder="Password" id="password" required>
-                    <button onclick="login()" type="Login" name="Login">Login</button>
-                    <div id ="error-container">
-                      <p class="error-message">Error</p>
+                    <input class="login-input" type="password" id="password">
+                    <button onclick="login()" id="btn-login" class="login-button">Login</button>
+                    <div id="error-container">
+                        <p id="error-text" class="error-message"></p>
                     </div>
+                    
                 </div>
             </article>
         </section>
     </div>
     <footer class="footer box-shadow">
         <p class="copyright">
-            (c) Created by Scott Vang
+            (c) Created by Lucas Phan
         </p>
     </footer>
-    <script type="text/javascript">
-      function login() {
 
-        let username = document.getElementsByName('username').value;
-        let password = document.getElementsByName('password').value;
-        if (username = 'scott' && password == 'vang') {
-          location.href = './home/home.html';
+    <script>
+        function login() {
+
+            
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            let errorContainer = document.getElementById('error-container');
+            let errorText = document.getElementById('error-text');
+
+            if(username == 'lucas' && password == 'phan') {
+                location.href = './home/home.html';
+            } else {
+                errorContainer.style.display = 'block';
+                errorText.style.display = 'block';
+                errorText.innerHTML = 'Error please try again...';
+
+               let handle = setInterval(() => {
+                    errorContainer.style.display = 'none';
+                    clearInterval(handle);
+                },2000);
+            }
+
+
+            //alert(password);
         }
-        else {
-          errorContainer.style.display = 'block';
-          errorText.style.display ='block';
-          errorText.innerHTML ='Error please try again...'
-
-        }
-
-        }
-        alert(`username`);
-
-      }
     </script>
 </body>
 </html>
