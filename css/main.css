@@ -9,7 +9,7 @@
                 min-height:100%;
                 display:flex;
                 flex-direction:column;
-                
+
             }
             .wrapper {
                 flex:1;
@@ -125,3 +125,43 @@
 				width:125px;
 				height:100px;
 			}
+      article.main-content.one-column {
+        width: 100%;
+        padding: 0 1%;
+        margin-top: 30px;
+        background-color: transparent;
+      }
+      content-bottom.main-content.gallery.h1 {
+        margin-left: 100px;
+      }
+      div.login-form {
+        width: 200px;
+        height: 250px;
+        background-color: #CCC;
+        margin: 40px auto 0;
+        border-radius: 7px;
+        padding: 20px;
+      }
+      input.login-input {
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 7px 0;
+      }
+      h1.login-h1 {
+        margin-bottom: 15px;
+      }
+      p.error-message {
+        display: none;
+        height:15px;
+        margin-top: 5px;
+        padding: 5px;
+        width: 100%;
+        color: #FFF;
+        background-color: red;
+        border:
+      }
+      div.login-page {
+        background-image: url('');
+        background-color: 
+      }
